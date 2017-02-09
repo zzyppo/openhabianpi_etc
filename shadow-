@@ -27,3 +27,4 @@ pi:$6$uG5ixn/G$vWjmQabZb8FNLkMZSlUQ9UBtbYUeN8vaamct.RP2HSa/6A73UMslmeebaX2rZyrTk
 avahi:*:17206:0:99999:7:::
 Debian-exim:!:17206:0:99999:7:::
 openhab:*:17206:0:99999:7:::
+mosquitto:*:17206:0:99999:7:::

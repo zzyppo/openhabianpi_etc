@@ -3,7 +3,7 @@ daemon:*::
 bin:*::
 sys:*::
 adm:*::
-tty:*::openhab
+tty:*::openhab,pi
 disk:*::
 lp:*::
 mail:*::

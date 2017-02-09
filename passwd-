@@ -26,4 +26,5 @@ sshd:x:106:65534::/var/run/sshd:/usr/sbin/nologin
 pi:x:1000:1000:,,,:/home/pi:/bin/bash
 avahi:x:107:112:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
 Debian-exim:x:108:114::/var/spool/exim4:/bin/false
-openhab:x:109:115::/var/lib/openhab2:/bin/false
+openhab:x:109:115:openhab2 runtime user,,,:/var/lib/openhab2:/bin/false
+mosquitto:x:110:116::/var/lib/mosquitto:/usr/sbin/nologin
