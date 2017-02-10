@@ -43,7 +43,8 @@ cups/subscriptions.conf
 cups/subscriptions.conf.O
 fake-hwclock.data
 check_mk/logwatch.state
-
+wpa_supplicant/wpa_supplicant.conf 
+resolv.conf 
 # editor temp files
 *~
 .*.sw?
