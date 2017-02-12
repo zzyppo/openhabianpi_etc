@@ -1,4 +1,0 @@
-sitemap tvcontrol label="TV control" {
-    Switch item=SAMSUNG_TV_ON_OFF mappings=[ON="ON", OFF="OFF"]
-  }
-}

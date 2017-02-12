@@ -1,0 +1,5 @@
+Switch SOUNDBAR_POWER "SOUNDBAR POWER" {exec=">[ON:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_POWER]", autoupdate="false"}
+
+Switch SOUNDBAR_VOLUME "SOUNDBAR VOLUME" {exec=">[ON:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_VOLUMEUP] >[OFF:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_VOLUMEDOWN]", autoupdate="false"}
+
+String SOUNDBAR_SOURCE "SOUNDBAR SOURCE" {exec=">[ON:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_CHANNEL]", autoupdate="false"}

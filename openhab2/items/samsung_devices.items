@@ -1,1 +1,0 @@
-Switch	SAMSUNG_TV_ON_OFF	"Samsung TV" [ "Lighting" ] { exec=">[ON:/scripts/tv_on.sh] >[OFF:/scripts/tv_on.sh]" }

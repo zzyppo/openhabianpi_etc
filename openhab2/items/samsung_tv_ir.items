@@ -1,0 +1,7 @@
+Switch SAMSUNG_TV_POWER "SAMSUNG TV-POW" {exec=">[ON:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_POWER]", autoupdate="false"}
+
+Switch SAMSUNG_TV_CHANNEL "SAMSUNG TV-CHANNEL" {exec=">[ON:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_CHANNELUP] >[OFF:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_CHANNELDOWN]", autoupdate="false"}
+
+String SAMSUNG_TV_ARROWS "SAMSUNG TV-NAV" {exec=">[UP:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_UP] >[DOWN:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_DOWN] >[LEFT:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_LEFT] >[RIGHT:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_RIGHT]", autoupdate="false"}
+
+String SAMSUNG_TV_CONTROL "SAMSUNG TV-CONTROL" {exec=">[ENTER:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_ENTER] >[HOME:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_HOME] >[BACK:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_BACK] >[EXIT:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_EXIT]", autoupdate="false"}

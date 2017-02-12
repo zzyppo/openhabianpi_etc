@@ -1,0 +1,21 @@
+sitemap mediacontrol label="Media control" {
+       Frame label="Media" {
+
+  
+     		Switch item=SAMSUNG_TV_POWER mappings=[ON="Activate"]
+    		Switch item=SAMSUNG_TV_CHANNEL mappings=[ON="UP", OFF="DOWN"]
+    		Switch item=SAMSUNG_TV_ARROWS mappings=[UP="UP", DOWN="DOWN", LEFT="LEFT", RIGHT="RIGHT"]
+    		Switch item=SAMSUNG_TV_CONTROL mappings=[ENTER="ENTER", HOME="HOME", BACK="BACK", EXIT="EXIT"]
+
+            Switch item=SOUNDBAR_POWER mappings=[ON="Activate"]
+    		Switch item=SOUNDBAR_VOLUME mappings=[ON="UP", OFF="DOWN"]
+    		Switch item=SOUNDBAR_SOURCE mappings=[ON="Switch"]
+        
+    }
+
+
+   
+    
+
+  }
+}

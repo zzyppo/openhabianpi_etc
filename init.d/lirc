@@ -166,5 +166,5 @@ case "$1" in
 		echo "Usage: /etc/init.d/lircd {start|stop|reload|restart|force-reload}"
 	exit 1
 esac
-
+lircd --device /dev/lirc0
 exit 0
