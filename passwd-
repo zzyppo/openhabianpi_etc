@@ -28,3 +28,7 @@ avahi:x:107:112:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
 Debian-exim:x:108:114::/var/spool/exim4:/bin/false
 openhab:x:109:115:openhab2 runtime user,,,:/var/lib/openhab2:/bin/false
 mosquitto:x:110:116::/var/lib/mosquitto:/usr/sbin/nologin
+colord:x:111:119:colord colour management daemon,,,:/var/lib/colord:/bin/false
+pulse:x:112:120:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:113:122:RealtimeKit,,,:/proc:/bin/false
+saned:x:114:123::/var/lib/saned:/bin/false

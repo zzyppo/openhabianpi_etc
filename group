@@ -19,7 +19,7 @@ cdrom:x:24:
 floppy:x:25:
 tape:x:26:
 sudo:x:27:pi
-audio:x:29:
+audio:x:29:pulse
 dip:x:30:
 www-data:x:33:
 backup:x:34:
@@ -55,3 +55,9 @@ Debian-exim:x:114:
 openhab:x:115:pi
 mosquitto:x:116:
 bluetooth:x:117:
+scanner:x:118:saned
+colord:x:119:
+pulse:x:120:
+pulse-access:x:121:
+rtkit:x:122:
+saned:x:123:

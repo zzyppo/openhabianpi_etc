@@ -19,7 +19,7 @@ cdrom:*::
 floppy:*::
 tape:*::
 sudo:*::pi
-audio:*::
+audio:*::pulse
 dip:*::
 www-data:*::
 backup:*::
@@ -54,3 +54,10 @@ sambashare:!::
 Debian-exim:!::
 openhab:!::pi
 mosquitto:!::
+bluetooth:!::
+scanner:!::
+colord:!::
+pulse:!::
+pulse-access:!::
+rtkit:!::
+saned:!::

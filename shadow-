@@ -1,4 +1,4 @@
-root:*:17206:0:99999:7:::
+root:$6$czdYZ3Ul$WbjLYk5CYDLVsP7QQyFh9Z2azPzXc1K7aK9yMWhpUSqceZVhktPP4kEDBwOuIVUJX4kV9H/HJTMCE8Bs7QCNQ.:17206:0:99999:7:::
 daemon:*:17206:0:99999:7:::
 bin:*:17206:0:99999:7:::
 sys:*:17206:0:99999:7:::
@@ -28,3 +28,7 @@ avahi:*:17206:0:99999:7:::
 Debian-exim:!:17206:0:99999:7:::
 openhab:*:17206:0:99999:7:::
 mosquitto:*:17206:0:99999:7:::
+colord:*:17210:0:99999:7:::
+pulse:*:17210:0:99999:7:::
+rtkit:*:17210:0:99999:7:::
+saned:*:17210:0:99999:7:::
