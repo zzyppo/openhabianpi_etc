@@ -54,3 +54,4 @@ sambashare:x:113:
 Debian-exim:x:114:
 openhab:x:115:pi
 mosquitto:x:116:
+bluetooth:x:117:
