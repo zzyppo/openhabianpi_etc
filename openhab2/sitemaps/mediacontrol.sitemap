@@ -13,9 +13,12 @@ sitemap mediacontrol label="Media control" {
         
     }
 
+    Frame label="Presence" {
+
+ 		Switch item=IPHONE_BARBIE_ONLINE 
+        Number item=IPHONE_BARBIE_TIME
+    }
 
    
-    
 
-  }
 }

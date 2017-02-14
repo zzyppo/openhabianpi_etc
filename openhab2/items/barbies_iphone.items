@@ -1,0 +1,2 @@
+Switch IPHONE_BARBIE_ONLINE { channel="network:device:barbies_iphone:online" autoupdate="true"}
+Number IPHONE_BARBIE_TIME { channel="network:device:barbies_iphone:time" autoupdate="true"}
