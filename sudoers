@@ -13,7 +13,8 @@ Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 # Host alias specification
 
 # User alias specification
-
+openhab ALL = NOPASSWD: /usr/bin/l2ping
+pi ALL = NOPASSWD: /usb/bin/l2ping
 # Cmnd alias specification
 
 # User privilege specification

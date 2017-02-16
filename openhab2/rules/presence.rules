@@ -1,0 +1,35 @@
+rule "Philipp is home"
+   when
+      Item IPHONE_PHILIPP_WIFI_ONLINE changed to ON or
+      Item IPHONE_PHILIPP_BT_ONLINE changed to ON
+   then
+      postUpdate(PHILIPP_HOME, ON)
+end
+ 
+rule "Philipp left home"
+   when
+      Item IPHONE_PHILIPP_WIFI_ONLINE changed to OFF or
+      Item IPHONE_PHILIPP_BT_ONLINE changed to OFF
+   then
+      if(IPHONE_PHILIPP_WIFI_ONLINE.state == OFF && IPHONE_PHILIPP_BT_ONLINE.state == OFF) {
+         postUpdate(PHILIPP_HOME, OFF)
+      }
+end
+
+rule "Barbie is home"
+   when
+      Item IPHONE_BARBIE_WIFI_ONLINE changed to ON or
+      Item IPHONE_BARBIE_BT_ONLINE changed to ON
+   then
+      postUpdate(BARBIE_HOME, ON)
+end
+ 
+rule "Barbie left home"
+   when
+      Item IPHONE_BARBIE_WIFI_ONLINE changed to OFF or
+      Item IPHONE_BARBIE_BT_ONLINE changed to OFF
+   then
+      if(IPHONE_BARBIE_WIFI_ONLINE.state == OFF && IPHONE_BARBIE_BT_ONLINE.state == OFF) {
+         postUpdate(BARBIE_HOME, OFF)
+      }
+end

@@ -1,0 +1,12 @@
+Switch IPHONE_BARBIE_WIFI_ONLINE (grp_PRESENCE) { channel="network:device:barbies_iphone:online" autoupdate="true"}
+Number IPHONE_BARBIE_WIFI_TIME (grp_PRESENCE)  { channel="network:device:barbies_iphone:time" autoupdate="true"}
+
+Switch IPHONE_PHILIPP_WIFI_ONLINE (grp_PRESENCE) { channel="network:device:philipps_iphone:online" autoupdate="true"}
+Number IPHONE_PHILIPP_WIFI_TIME (grp_PRESENCE) { channel="network:device:philipps_iphone:time" autoupdate="true"}
+
+Switch IPHONE_PHILIPP_BT_ONLINE "iPhone Philipp" (grp_PRESENCE) { exec="<[/etc/openhab2/scripts/bt_device_ping.sh 1:60000:REGEX((.*?))]" }
+Switch IPHONE_BARBIE_BT_ONLINE "iPhone Barbie" (grp_PRESENCE) { exec="<[/etc/openhab2/scripts/bt_device_ping.sh 2:60000:REGEX((.*?))]" }
+
+
+Switch PHILIPP_HOME "Philipps presence"
+Switch BARBIE_HOME "Barbies presence"
