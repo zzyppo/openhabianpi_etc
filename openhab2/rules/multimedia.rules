@@ -1,0 +1,16 @@
+rule "Harder Music Stream"
+   when
+      Item PLAY_HARDER_STREAM received command
+   then
+
+   if (receivedCommand == OFF){
+       postUpdate(PLAY_HARDER_STREAM, OFF)
+
+
+   }
+   if (receivedCommand == ON){
+       postUpdate(PLAY_HARDER_STREAM, ON)
+       playStream("http://harder-high.rautemusik.fm")
+   }
+     
+end

@@ -33,3 +33,21 @@ rule "Barbie left home"
          postUpdate(BARBIE_HOME, OFF)
       }
 end
+
+rule "Somebody is home"
+   when
+      Item BARBIE_HOME changed to ON or
+      Item PHILIPP_HOME changed to ON
+   then
+      postUpdate(SOMEBODY_HOME, ON)
+end
+ 
+rule "Nobody is home"
+   when
+      Item BARBIE_HOME changed to OFF or
+      Item PHILIPP_HOME changed to OFF
+   then
+      if(BARBIE_HOME.state == OFF && PHILIPP_HOME.state == OFF) {
+      postUpdate(SOMEBODY_HOME, OFF)
+      }
+end

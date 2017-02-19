@@ -10,3 +10,5 @@ Switch IPHONE_BARBIE_BT_ONLINE "iPhone Barbie" (grp_PRESENCE) { exec="<[/etc/ope
 
 Switch PHILIPP_HOME "Philipps presence"
 Switch BARBIE_HOME "Barbies presence"
+
+Switch SOMEBODY_HOME "Somebody is home"

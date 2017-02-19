@@ -1,0 +1,14 @@
+rule "Turn off everything"
+   when
+      Item SOMEBODY_HOME changed to OFF
+   then
+
+   if (SOUNDBAR_POWER.state == ON){
+       sendCommand(SOUNDBAR_POWER, OFF)
+   }
+   if (SAMSUNG_TV_POWER.state == ON){
+       sendCommand(SAMSUNG_TV_POWER, OFF)
+   }
+     
+end
+

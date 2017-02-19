@@ -1,0 +1,28 @@
+rule "Soundbar power"
+   when
+      Item SOUNDBAR_POWER received command
+   then
+
+   if (receivedCommand == OFF){
+       postUpdate(SOUNDBAR_POWER, OFF)
+   }
+   if (receivedCommand == ON){
+       postUpdate(SOUNDBAR_POWER, ON)
+   }
+     
+end
+ 
+ rule "Samsung TV power"
+   when
+      Item SAMSUNG_TV_POWER received command
+   then
+
+   if (receivedCommand == OFF){
+       postUpdate(SAMSUNG_TV_POWER, OFF)
+   }
+   if (receivedCommand == ON){
+       postUpdate(SAMSUNG_TV_POWER, ON)
+   }
+     
+end
+ 
