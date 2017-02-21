@@ -4,6 +4,7 @@ rule "Philipp is home"
       Item IPHONE_PHILIPP_BT_ONLINE changed to ON
    then
       postUpdate(PHILIPP_HOME, ON)
+      sendTelegram("philipp", "Philipp is home")
 end
  
 rule "Philipp left home"
@@ -13,6 +14,7 @@ rule "Philipp left home"
    then
       if(IPHONE_PHILIPP_WIFI_ONLINE.state == OFF && IPHONE_PHILIPP_BT_ONLINE.state == OFF) {
          postUpdate(PHILIPP_HOME, OFF)
+         sendTelegram("philipp", "Philipp left home")
       }
 end
 
@@ -22,6 +24,7 @@ rule "Barbie is home"
       Item IPHONE_BARBIE_BT_ONLINE changed to ON
    then
       postUpdate(BARBIE_HOME, ON)
+      sendTelegram("philipp", "Barbie is home")
 end
  
 rule "Barbie left home"
@@ -31,6 +34,7 @@ rule "Barbie left home"
    then
       if(IPHONE_BARBIE_WIFI_ONLINE.state == OFF && IPHONE_BARBIE_BT_ONLINE.state == OFF) {
          postUpdate(BARBIE_HOME, OFF)
+         sendTelegram("philipp", "Barbie left home")
       }
 end
 
