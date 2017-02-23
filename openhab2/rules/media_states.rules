@@ -4,10 +4,25 @@ rule "Soundbar power"
    then
 
    if (receivedCommand == OFF){
-       postUpdate(SOUNDBAR_POWER, OFF)
+      if (SOUNDBAR_POWER.state == OFF)
+      {
+        postUpdate(SOUNDBAR_POWER, ON)
+      }
+      else
+      {
+        postUpdate(SOUNDBAR_POWER, OFF)
+      }
    }
-   if (receivedCommand == ON){
-       postUpdate(SOUNDBAR_POWER, ON)
+   else if (receivedCommand == ON){
+
+      if (SOUNDBAR_POWER.state == ON)
+      {
+         postUpdate(SOUNDBAR_POWER, OFF)
+      }
+      else
+      {
+        postUpdate(SOUNDBAR_POWER, ON)
+      }
    }
      
 end
@@ -18,10 +33,25 @@ end
    then
 
    if (receivedCommand == OFF){
-       postUpdate(SAMSUNG_TV_POWER, OFF)
+      if (SAMSUNG_TV_POWER.state == OFF)
+      {
+        postUpdate(SAMSUNG_TV_POWER, ON)
+      }
+      else
+      {
+        postUpdate(SAMSUNG_TV_POWER, OFF)
+      }
    }
-   if (receivedCommand == ON){
-       postUpdate(SAMSUNG_TV_POWER, ON)
+   else if (receivedCommand == ON){
+
+      if (SAMSUNG_TV_POWER.state == ON)
+      {
+         postUpdate(SAMSUNG_TV_POWER, OFF)
+      }
+      else
+      {
+        postUpdate(SAMSUNG_TV_POWER, ON)
+      }
    }
      
 end
