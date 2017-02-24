@@ -15,6 +15,9 @@ Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 # User alias specification
 openhab ALL = NOPASSWD: /usr/bin/l2ping
 pi ALL = NOPASSWD: /usb/bin/l2ping
+
+openhab ALL = NOPASSWD: /usr/local/bin/ps4-waker 
+pi ALL = NOPASSWD: /usr/local/bin/ps4-waker
 # Cmnd alias specification
 
 # User privilege specification

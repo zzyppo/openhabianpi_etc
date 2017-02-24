@@ -1,0 +1,41 @@
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+import org.java.math.*
+import org.joda.time.*
+
+rule "Playstation ON"
+   when
+      Item PS4_POWER received command
+   then
+
+   if (receivedCommand == ON){
+      if (SAMSUNG_TV_POWER.state == OFF)
+      {
+         sendCommand(SAMSUNG_TV_POWER, ON)
+         Thread::sleep(3000)
+         sendCommand(SAMSUNG_TV_CONTROL, "EXIT") 
+         Thread::sleep(1000)
+
+      }
+      sendCommand(SAMSUNG_TV_CONTROL, "EXIT") 
+      Thread::sleep(1000)
+      sendCommand(SAMSUNG_TV_CONTROL, "ENTER") 
+      postUpdate(PS4_POWER, ON)
+   }
+
+   if (receivedCommand == OFF){
+      postUpdate(PS4_POWER, OFF)
+   }  
+end
+
+rule "Start Diabolo"
+   when
+      Item PS4_START_DIABOLO received command
+   then
+   
+   if (PS4_POWER.state == ON)
+   {
+       executeCommandLine(/etc/openhab2/scripts/ps4_control.sh GAME DIABOLO, 5000)
+   }
+end

@@ -13,6 +13,12 @@ sitemap mediacontrol label="Media control" {
         
     }
 
+    Frame label="Playstation 4" {
+         Switch item=PS4_POWER mappings=[ON="ON", OFF="OFF"]
+         Switch item=PS4_START_DIABOLO mappings=[ON="Play"]
+
+    }
+
     Frame label="Multimedia Actions" {
 
   

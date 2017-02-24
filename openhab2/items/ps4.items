@@ -1,0 +1,3 @@
+Switch PS4_POWER "Playstation" {exec=">[ON:/etc/openhab2/scripts/ps4_control.sh ON] >[OFF:/etc/openhab2/scripts/ps4_control.sh OFF]", autoupdate="false"}
+
+Switch PS4_START_DIABOLO "Diabolo"

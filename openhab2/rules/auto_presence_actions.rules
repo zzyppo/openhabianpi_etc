@@ -9,6 +9,8 @@ rule "Turn off everything"
    if (SAMSUNG_TV_POWER.state == ON){
        sendCommand(SAMSUNG_TV_POWER, OFF)
    }
+
+   sendCommand(PS4_POWER, OFF)
      
 end
 
