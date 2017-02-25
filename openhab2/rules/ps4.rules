@@ -10,6 +10,10 @@ rule "Playstation ON"
    then
 
    if (receivedCommand == ON){
+      if (SOUNDBAR_POWER.state == OFF)
+      {
+         sendCommand(SOUNDBAR_POWER, ON)
+      }
       if (SAMSUNG_TV_POWER.state == OFF)
       {
          sendCommand(SAMSUNG_TV_POWER, ON)
