@@ -4,14 +4,14 @@ rule "Turn off everything"
    then
 
    if (SOUNDBAR_POWER.state == ON){
-       sendCommand(SOUNDBAR_POWER, OFF)
+       //sendCommand(SOUNDBAR_POWER, OFF)
    }
    if (SAMSUNG_TV_POWER.state == ON){
-       sendCommand(SAMSUNG_TV_POWER, OFF)
+       //sendCommand(SAMSUNG_TV_POWER, OFF)
    }
    if (PS4_POWER.state == ON)
    {
-      sendCommand(PS4_POWER, OFF)
+     // sendCommand(PS4_POWER, OFF)
    }
      
 end
