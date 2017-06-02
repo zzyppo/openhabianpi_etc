@@ -1,0 +1,3 @@
+Switch LivingRoom_Light "Living Room Light" <light> (LR,gLight)
+    { mqtt=">[broker:cmnd/sonoffSpeakers/POWER:command:*:default],
+            <[broker:stat/sonoffSpeakers/POWER:state:default]" 
