@@ -1,3 +1,3 @@
-network:device:barbies_iphone [ hostname="10.0.0.7", port="0", retry="5", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="true" ]
+network:device:barbies_iphone [ hostname="10.0.0.4", port="0", retry="10", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="true" ]
 
-network:device:philipps_iphone [ hostname="10.0.0.2", port="0", retry="5", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="true" ]
+network:device:philipps_iphone [ hostname="10.0.0.1", port="0", retry="10", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="true" ]
