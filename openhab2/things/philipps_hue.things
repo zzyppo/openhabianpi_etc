@@ -1,0 +1,6 @@
+Bridge hue:bridge:1 [ ipAddress="10.0.0.23", userName="rAaGBg6v-xrM7aoE3ztrDPKEEo178yuXaiNLP592" ] {
+	0210 livingRoomBulb1 [lightId="2"]
+	0210 studioBulb [lightId="3"]
+        0210 bedroomBulb [lightId="1"]
+        0210 studioAmbilight [lightId="4"]
+}

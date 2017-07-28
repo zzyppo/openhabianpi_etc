@@ -1,4 +1,17 @@
 sitemap mediacontrol label="Media control" {
+
+	Frame label="Lights" {
+		// LivingRoomLamp1
+		Switch		item=		LivingRoomLight1_Toggle
+		Slider		item=		LivingRoomLight1_Dimmer
+		Colorpicker	item=		LivingRoomLight1_Color
+		Slider		item=		LivingRoomLight1_ColorTemp
+		Switch		item=		LivingRoomLight1_Alert		mappings=[NONE="None", SELECT="Alert", LSELECT="Long Alert"]
+		Switch		item=		LivingRoomLight1_Effect
+	}
+
+
+
        Frame label="Media" {
 
   

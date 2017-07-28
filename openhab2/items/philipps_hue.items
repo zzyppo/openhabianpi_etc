@@ -1,0 +1,7 @@
+// Living Room Bulb 1
+Switch	LivingRoomLight1_Toggle		{ channel="hue:0210:1:livingRoomBulb1:color" }
+Dimmer	LivingRoomLight1_Dimmer		{ channel="hue:0210:1:livingRoomBulb1:color" }
+Color	LivingRoomLight1_Color		{ channel="hue:0210:1:livingRoomBulb1:color" }
+Dimmer	LivingRoomLight1_ColorTemp	{ channel="hue:0210:1:livingRoomBulb1:color_temperature" }
+String	LivingRoomLight1_Alert		{ channel="hue:0210:1:livingRoomBulb1:alert" }
+Switch	LivingRoomLight1_Effect		{ channel="hue:0210:1:livingRoomBulb1:effect" }
