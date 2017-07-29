@@ -1,4 +1,4 @@
-Switch SAMSUNG_TV_POWER "SAMSUNG TV" [ "Lighting" ] {exec=">[ON:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_POWER] >[OFF:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_POWER]", autoupdate="false"}
+Switch SAMSUNG_TV_POWER "SAMSUNG TV" [ "Switchable" ] {exec=">[ON:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_POWER] >[OFF:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_POWER]", autoupdate="false"}
 
 Switch SAMSUNG_TV_CHANNEL "SAMSUNG TV-CHANNEL" {exec=">[ON:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_CHANNELUP] >[OFF:/etc/openhab2/scripts/samsung_tv_ir.sh KEY_CHANNELDOWN]", autoupdate="false"}
 

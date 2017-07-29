@@ -1,3 +1,9 @@
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+import org.java.math.*
+import org.joda.time.*
+
 rule "Harder Music Stream"
    when
       Item PLAY_HARDER_STREAM received command
@@ -13,4 +19,59 @@ rule "Harder Music Stream"
        playStream("http://harder-high.rautemusik.fm")
    }
      
+end
+
+rule "Netflix ON"
+   when
+      Item TV_ACTIVATE_NETFLIX received command
+   then
+
+   if (receivedCommand == ON){
+      if (SOUNDBAR_POWER.state == OFF)
+      {
+         sendCommand(SOUNDBAR_POWER, ON)
+      }
+      if (SAMSUNG_TV_POWER.state == OFF)
+      {
+         sendCommand(SAMSUNG_TV_POWER, ON)
+         Thread::sleep(3000)
+         sendCommand(SAMSUNG_TV_CONTROL, "EXIT") 
+         Thread::sleep(300)
+         sendCommand(SAMSUNG_TV_CONTROL, "HOME")
+         Thread::sleep(300)
+         sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+         sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+         sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+         sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+	sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+	sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+	sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+         Thread::sleep(300)
+         sendCommand(SAMSUNG_TV_ARROWS, "RIGHT")
+     
+         sendCommand(SAMSUNG_TV_ARROWS, "RIGHT")
+         sendCommand(SAMSUNG_TV_ARROWS, "RIGHT")
+         sendCommand(SAMSUNG_TV_CONTROL, "ENTER")
+         sendCommand(SAMSUNG_TV_CONTROL, "ENTER")
+      }
+      
+       sendCommand(SAMSUNG_TV_CONTROL, "EXIT")
+         Thread::sleep(300)
+         sendCommand(SAMSUNG_TV_CONTROL, "HOME")
+	Thread::sleep(300)
+         sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+         sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+         sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+         sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+	        sendCommand(SAMSUNG_TV_ARROWS, "LEFT") 
+        sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+        sendCommand(SAMSUNG_TV_ARROWS, "LEFT")
+         Thread::sleep(300)
+         sendCommand(SAMSUNG_TV_ARROWS, "RIGHT")
+         sendCommand(SAMSUNG_TV_ARROWS, "RIGHT")
+         sendCommand(SAMSUNG_TV_ARROWS, "RIGHT")
+         sendCommand(SAMSUNG_TV_CONTROL, "ENTER")
+        sendCommand(SAMSUNG_TV_CONTROL, "ENTER")   
+}
+
 end

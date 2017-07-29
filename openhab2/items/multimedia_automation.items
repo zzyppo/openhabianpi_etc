@@ -1,1 +1,3 @@
 Switch PLAY_HARDER_STREAM "Play Rautemusic Harder"
+
+Switch TV_ACTIVATE_NETFLIX  "Netflix Switch" [ "Switchable" ]

@@ -1,4 +1,4 @@
-Switch SOUNDBAR_POWER "SOUNDBAR" [ "Lighting" ] {exec=">[ON:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_POWER] >[OFF:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_POWER]", autoupdate="false"}
+Switch SOUNDBAR_POWER "SOUNDBAR" [ "Switchable" ] {exec=">[ON:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_POWER] >[OFF:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_POWER]", autoupdate="false"}
 
 Switch SOUNDBAR_VOLUME "SOUNDBAR VOLUME" {exec=">[ON:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_VOLUMEUP] >[OFF:/etc/openhab2/scripts/samsung_soundbar_ir.sh KEY_VOLUMEDOWN]", autoupdate="false"}
 

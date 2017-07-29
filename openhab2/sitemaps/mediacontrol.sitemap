@@ -36,6 +36,7 @@ sitemap mediacontrol label="Media control" {
 
   
             Switch item=PLAY_HARDER_STREAM mappings=[ON="START", OFF="STOP"]
+            Switch item=TV_ACTIVATE_NETFLIX mappings=[ON="START"]
     }
 
     Frame label="Presence" {
