@@ -41,11 +41,12 @@ sitemap mediacontrol label="Media control" {
 
     Frame label="Presence" {
 
- 		Switch item=IPHONE_BARBIE_WIFI_ONLINE 
+ 	Switch item=IPHONE_BARBIE_WIFI_ONLINE 
 
-        Switch item=IPHONE_PHILIPP_WIFI_ONLINE 
-
-
+        Switch item=IPHONE_PHILIPP_WIFI_ONLINE
+ 
+        Switch item=IPHONE_PHILIPP_GPS_HOME
+    
         Text item=PHILIPP_HOME label="Philipps is [MAP(presence.map):%s]"
         Text item=BARBIE_HOME label="Barbie is [MAP(presence.map):%s]"
 
