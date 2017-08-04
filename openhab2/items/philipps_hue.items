@@ -5,3 +5,29 @@ Color	LivingRoomLight1_Color		{ channel="hue:0210:1:livingRoomBulb1:color" }
 Dimmer	LivingRoomLight1_ColorTemp	{ channel="hue:0210:1:livingRoomBulb1:color_temperature" }
 String	LivingRoomLight1_Alert		{ channel="hue:0210:1:livingRoomBulb1:alert" }
 Switch	LivingRoomLight1_Effect		{ channel="hue:0210:1:livingRoomBulb1:effect" }
+
+
+// Studio Bulb
+Switch	StudioLight_Toggle		{ channel="hue:0210:1:studioBulb:color" }
+Dimmer	StudioLight_Dimmer		{ channel="hue:0210:1:studioBulb:color" }
+Color	StudioLight_Color		{ channel="hue:0210:1:studioBulb:color" }
+Dimmer	StudioLight_ColorTemp	{ channel="hue:0210:1:studioBulb:color_temperature" }
+String	StudioLight_Alert		{ channel="hue:0210:1:studioBulb:alert" }
+Switch	StudioLight_Effect		{ channel="hue:0210:1:studioBulb:effect" }
+
+// Bedroom Bulb
+Switch	BedroomLight_Toggle		{ channel="hue:0210:1:bedroomBulb:color" }
+Dimmer	BedroomLight_Dimmer		{ channel="hue:0210:1:bedroomBulb:color" }
+Color	BedroomLight_Color		{ channel="hue:0210:1:bedroomBulb:color" }
+Dimmer	BedroomLight_ColorTemp	{ channel="hue:0210:1:bedroomBulb:color_temperature" }
+String	BedroomLight_Alert		{ channel="hue:0210:1:bedroomBulb:alert" }
+Switch	BedroomLight_Effect		{ channel="hue:0210:1:bedroomBulb:effect" }
+
+// Studio Ambilight
+Switch	StudioAmbilight_Toggle		{ channel="hue:0210:1:studioAmbilight:color" }
+Dimmer	StudioAmbilight_Dimmer		{ channel="hue:0210:1:studioAmbilight:color" }
+Color	StudioAmbilight_Color		{ channel="hue:0210:1:studioAmbilight:color" }
+Dimmer	BStudioAmbilight_ColorTemp	{ channel="hue:0210:1:studioAmbilight:color_temperature" }
+String	StudioAmbilight_Alert		{ channel="hue:0210:1:studioAmbilight:alert" }
+Switch	StudioAmbilight_Effect		{ channel="hue:0210:1:studioAmbilight:effect" }
+

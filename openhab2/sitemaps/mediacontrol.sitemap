@@ -46,9 +46,15 @@ sitemap mediacontrol label="Media control" {
         Switch item=IPHONE_PHILIPP_WIFI_ONLINE
  
         Switch item=IPHONE_PHILIPP_GPS_HOME
+        Switch item=IPHONE_BARBIE_GPS_HOME
     
         Text item=PHILIPP_HOME label="Philipps is [MAP(presence.map):%s]"
         Text item=BARBIE_HOME label="Barbie is [MAP(presence.map):%s]"
 
     }
+
+    Frame label="Weather" {
+        Switch item=WILL_RAIN
+    }
+
 }

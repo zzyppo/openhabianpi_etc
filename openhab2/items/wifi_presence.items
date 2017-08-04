@@ -8,7 +8,7 @@ Switch IPHONE_PHILIPP_BT_ONLINE "iPhone Philipp" (grp_PRESENCE) { exec="<[/etc/o
 Switch IPHONE_BARBIE_BT_ONLINE "iPhone Barbie" (grp_PRESENCE) { exec="<[/etc/openhab2/scripts/bt_device_ping.sh 2:60000:REGEX((.*?))]" }
 
 Switch IPHONE_PHILIPP_GPS_HOME "Philipp GPS Home" (grp_PRESENCE)
-
+Switch IPHONE_BARBIE_GPS_HOME "Barbie GPS Home" (grp_PRESENCE)
 
 Switch PHILIPP_HOME "Philipps presence"
 Switch BARBIE_HOME "Barbies presence"

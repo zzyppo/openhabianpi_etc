@@ -4,15 +4,37 @@ rule "Turn off everything"
    then
 
    if (SOUNDBAR_POWER.state == ON){
-       //sendCommand(SOUNDBAR_POWER, OFF)
+       sendCommand(SOUNDBAR_POWER, OFF)
    }
    if (SAMSUNG_TV_POWER.state == ON){
-       //sendCommand(SAMSUNG_TV_POWER, OFF)
+       sendCommand(SAMSUNG_TV_POWER, OFF)
    }
    if (PS4_POWER.state == ON)
    {
-     // sendCommand(PS4_POWER, OFF)
+      sendCommand(PS4_POWER, OFF)
    }
+
+   if (LivingRoomLight1_Toggle.state == ON)
+   {
+      sendCommand(LivingRoomLight1_Toggle, OFF)
+   }
+
+   if (StudioLight_Toggle.state == ON)
+   {
+      sendCommand(StudioLight_Toggle, OFF)        
+   }
+
+   if (BedroomLight_Toggle.state == ON)
+   {
+      sendCommand(BedroomLight_Toggle, OFF)        
+   }
+
+
+   if (StudioAmbilight_Toggle.state == ON)
+   {
+      sendCommand(StudioAmbilight_Toggle, OFF)        
+   }
+   
      
 end
 

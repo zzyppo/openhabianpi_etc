@@ -1,0 +1,8 @@
+rule "Perform weather warning when rain is coming"
+   when
+      Item WILL_RAIN changed to ON or
+   then
+         postUpdate(WILL_RAIN, OFF)
+         sendTelegram("barbie", "Warning! Rain is coming!!")
+         sendTelegram("philipp", "Warning! Rain is coming!!")
+end

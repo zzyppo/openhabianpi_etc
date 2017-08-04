@@ -3,19 +3,37 @@ rule "Philipp is home"
       Item IPHONE_PHILIPP_WIFI_ONLINE changed to ON or
       Item IPHONE_PHILIPP_BT_ONLINE changed to ON
    then
-      postUpdate(PHILIPP_HOME, ON)
+      if (PHILIPP_HOME.state == OFF)
+      {
+         postUpdate(PHILIPP_HOME, ON)
+         sendTelegram("barbie", "Philipp is home")
+         sendTelegram("philipp", "Philipp is home")
+      }
+      postUpdate(IPHONE_PHILIPP_GPS_HOME, ON)
     //  sendTelegram("barbie", "Philipp is home")
 end
  
 rule "Philipp left home"
    when
       Item IPHONE_PHILIPP_WIFI_ONLINE changed to OFF or
-      Item IPHONE_PHILIPP_BT_ONLINE changed to OFF
+      Item IPHONE_PHILIPP_BT_ONLINE changed to OFF or
+      Item IPHONE_PHILIPP_GPS_HOME changed to OFF
    then
-      if(IPHONE_PHILIPP_WIFI_ONLINE.state == OFF && IPHONE_PHILIPP_BT_ONLINE.state == OFF) {
+      if(IPHONE_PHILIPP_WIFI_ONLINE.state == OFF && IPHONE_PHILIPP_BT_ONLINE.state == OFF && IPHONE_PHILIPP_GPS_HOME.state == OFF) {
          postUpdate(PHILIPP_HOME, OFF)
-         //sendTelegram("barbie", "Philipp left home")
+         sendTelegram("barbie", "Philipp left home")
+         sendTelegram("philipp", "Philipp left home")
       }
+end
+
+rule "Barbie about to get home" 
+  when 
+     Item IPHONE_BARBIE_GPS_HOME changed to ON 
+  then
+     if (BARBIE_HOME.state == OFF)
+     {
+       sendTelegram("philipp", "Barbie about to get home")
+     }
 end
 
 rule "Barbie is home"
@@ -23,20 +41,29 @@ rule "Barbie is home"
       Item IPHONE_BARBIE_WIFI_ONLINE changed to ON or
       Item IPHONE_BARBIE_BT_ONLINE changed to ON
    then
-      postUpdate(BARBIE_HOME, ON)
+      if (BARBIE_HOME.state == OFF)
+      {
+         postUpdate(BARBIE_HOME, ON)
+         sendTelegram("barbie", "Barbie is home")
+         sendTelegram("philipp", "Barbie is home")
+      }
+      postUpdate(IPHONE_BARBIE_GPS_HOME, ON)
     //  sendTelegram("philipp", "Barbie is home")
 end
  
 rule "Barbie left home"
    when
       Item IPHONE_BARBIE_WIFI_ONLINE changed to OFF or
-      Item IPHONE_BARBIE_BT_ONLINE changed to OFF
+      Item IPHONE_BARBIE_BT_ONLINE changed to OFF or
+      Item IPHONE_BARBIE_GPS_HOME changed to OFF
    then
-      if(IPHONE_BARBIE_WIFI_ONLINE.state == OFF && IPHONE_BARBIE_BT_ONLINE.state == OFF) {
+      if(IPHONE_BARBIE_WIFI_ONLINE.state == OFF && IPHONE_BARBIE_BT_ONLINE.state == OFF && IPHONE_BARBIE_GPS_HOME.state == OFF) {
          postUpdate(BARBIE_HOME, OFF)
-     //    sendTelegram("philipp", "Barbie left home")
+         sendTelegram("barbie", "Barbie left home")
+         sendTelegram("philipp", "Barbie left home")
       }
 end
+
 
 rule "Somebody is home"
    when
