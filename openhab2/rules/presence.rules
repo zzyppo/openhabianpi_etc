@@ -7,7 +7,7 @@ rule "Philipp is home"
       {
          postUpdate(PHILIPP_HOME, ON)
          sendTelegram("barbie", "Philipp is home")
-         sendTelegram("philipp", "Philipp is home")
+        // sendTelegram("philipp", "Philipp is home")
       }
       postUpdate(IPHONE_PHILIPP_GPS_HOME, ON)
     //  sendTelegram("barbie", "Philipp is home")
@@ -22,7 +22,7 @@ rule "Philipp left home"
       if(IPHONE_PHILIPP_WIFI_ONLINE.state == OFF && IPHONE_PHILIPP_BT_ONLINE.state == OFF && IPHONE_PHILIPP_GPS_HOME.state == OFF) {
          postUpdate(PHILIPP_HOME, OFF)
          sendTelegram("barbie", "Philipp left home")
-         sendTelegram("philipp", "Philipp left home")
+         //sendTelegram("philipp", "Philipp left home")
       }
 end
 
@@ -44,7 +44,7 @@ rule "Barbie is home"
       if (BARBIE_HOME.state == OFF)
       {
          postUpdate(BARBIE_HOME, ON)
-         sendTelegram("barbie", "Barbie is home")
+         //sendTelegram("barbie", "Barbie is home")
          sendTelegram("philipp", "Barbie is home")
       }
       postUpdate(IPHONE_BARBIE_GPS_HOME, ON)
@@ -59,7 +59,7 @@ rule "Barbie left home"
    then
       if(IPHONE_BARBIE_WIFI_ONLINE.state == OFF && IPHONE_BARBIE_BT_ONLINE.state == OFF && IPHONE_BARBIE_GPS_HOME.state == OFF) {
          postUpdate(BARBIE_HOME, OFF)
-         sendTelegram("barbie", "Barbie left home")
+         //sendTelegram("barbie", "Barbie left home")
          sendTelegram("philipp", "Barbie left home")
       }
 end
