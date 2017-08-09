@@ -23,6 +23,11 @@ sitemap mediacontrol label="Media control" {
             Switch item=SOUNDBAR_POWER mappings=[ON="ON", OFF="OFF"]
     		Switch item=SOUNDBAR_VOLUME mappings=[ON="UP", OFF="DOWN"]
     		Switch item=SOUNDBAR_SOURCE mappings=[ON="Switch"]
+
+            Switch item=TV_PLAY mappings=[ON="ON"]
+            Switch item=TV_PAUSE mappings=[ON="ON"]
+
+
         
     }
 
