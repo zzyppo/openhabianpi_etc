@@ -39,6 +39,9 @@ if [ ! -f $FLAG ]; then
   echo "[openHABian] This file was created after the first boot script was executed (see /etc/rc.local). Do not delete." >> $FLAG
 fi # FLAG
 
+
+ifdown wlan0
+
 exit 0
 
 # vim: filetype=sh

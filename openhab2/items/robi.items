@@ -1,0 +1,2 @@
+Switch ROBI_CLEAN {mqtt=">[mosquitto:broadlink/robi/clean:command:ON:replay],>[mosquitto:broadlink/robi/clean:command:OFF:replay]"}
+Switch ROBI_HOME {mqtt=">[mosquitto:broadlink/robi/home:command:ON:replay],>[mosquitto:broadlink/robi/home:command:OFF:replay]"}

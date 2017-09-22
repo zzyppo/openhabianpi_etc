@@ -62,4 +62,10 @@ sitemap mediacontrol label="Media control" {
         Switch item=WILL_RAIN
     }
 
+     Frame label="Robi" {
+        Switch item=ROBI_CLEAN
+        Switch item=ROBI_HOME 
+    }
+    
 }
+
